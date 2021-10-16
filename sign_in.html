@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sign_in.css">
+    <title>Registiratsiya</title>
+</head>
+<body>
+    <div class="container">
+        <div class="inputs">
+            <input type="text" name="" id="" required>
+            <label for=""> Username </label>
+        </div>
+        <div class="inputs">
+            <input type="password" class="password" name="" id="" required>
+            <label for=""> Password </label>
+            <img  class="passImg" src="./eye.svg"  alt="" onclick="passwordShow()">
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+function passwordShow() {
+            let pass = document.querySelector(".password");
+            let passImg = document.querySelector('.passImg');
+            if (pass.type === "password") {
+                pass.type = "text";
+                passImg.src = './eye-hidden.svg'
+            } else {
+                pass.type = "password";
+                passImg.src = './eye.svg'
+
+            }
+
+        }
+    </script>
+</body>
+</html>
